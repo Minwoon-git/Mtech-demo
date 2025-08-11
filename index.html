@@ -1,72 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
   <title>Mtech Case</title>
   <style>
-     .form-box {
+    .form-box {
       width: 500px;
       margin: 0 auto;
       padding: 30px;
-      border: 1px solid #28a745;
+      border: 2px solid #1e3a8a; /* 남색 테두리 */
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       text-align: left;
+    }
+    .submit-btn {
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 10px 22px;
+      background-color: #1e3a8a; /* 남색 */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+    .submit-btn:hover {
+      background-color: #1e40af; /* 조금 더 진한 남색 */
     }
   </style>
 </head>
 <body>
   <h1 align="center">inquiry</h1>
   <div class="form-box">
-  <form align="center" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DdJ000002nStF" method="POST">
+    <form align="center" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DdJ000002nStF" method="POST">
+      <!-- Salesforce Org ID -->
+      <input type="hidden" name="oid" value="00DdJ000002nStF">
 
-    <!-- ▶ 필수: Salesforce Org ID (Setup > Company Information에서 확인) -->
-    <input type="hidden" name="oid" value="00DdJ000002nStF">
+      <!-- 제출 후 리디렉션될 URL -->
+      <input type="hidden" name="retURL" value="https://minwoon-git.github.io/">
 
-    <!-- ▶ 제출 후 리디렉션될 URL -->
-    <input type="hidden" name="retURL" value="https://minwoon-git.github.io/">
-    <!-- url 수정 !!-->
-    
-    <!-- 폼 정보 -->
-    <label>이름 (Full Name):</label><br>
-    <input style="height: 25px; margin-top: 10px;" type="text" name="last_name"><br><br>
+      <label>이름 (Full Name):</label><br>
+      <input style="height: 25px; margin-top: 10px;" type="text" name="last_name"><br><br>
 
-    <label>회사 (Company):</label><br>
-    <input style="height: 25px; margin-top: 10px;" type="text" name="company"><br><br>
+      <label>회사 (Company):</label><br>
+      <input style="height: 25px; margin-top: 10px;" type="text" name="company"><br><br>
 
-    <label>직급 (Title):</label><br>
-    <input style="height: 25px; margin-top: 10px;" type="text" name="title"><br><br>
+      <label>직급 (Title):</label><br>
+      <input style="height: 25px; margin-top: 10px;" type="text" name="title"><br><br>
 
-    <label>이메일 (Email):</label><br>
-    <input style="height: 25px; margin-top: 10px;" type="email" name="email"><br><br>
+      <label>이메일 (Email):</label><br>
+      <input style="height: 25px; margin-top: 10px;" type="email" name="email"><br><br>
 
-    <label>전화번호 (Phone):</label><br>
-    <input style="height: 25px; margin-top: 10px;" type="tel" name="phone"><br><br>
+      <label>전화번호 (Phone):</label><br>
+      <input style="height: 25px; margin-top: 10px;" type="tel" name="phone"><br><br>
 
-    <label>문의 내용 (Case):</label><br>
-<textarea name="CaseText__c" style="width:400px; height:150px; margin-top:10px; padding:10px;"></textarea><br><br>
+      <label>문의 내용 (Case):</label><br>
+      <textarea name="CaseText__c" style="width:400px; height:150px; margin-top:10px; padding:10px;"></textarea><br><br>
 
-
-   <input 
-  type="submit" 
-  value="폼 제출"
-  style="
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 10px 22px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  "
-  onmouseover="this.style.backgroundColor='#218838';"
-  onmouseout="this.style.backgroundColor='#28a745';"
-/>
-
-
-  </form>
-</div>
+      <input type="submit" value="폼 제출" class="submit-btn" />
+    </form>
+  </div>
 </body>
 </html>
