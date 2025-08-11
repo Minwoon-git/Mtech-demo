@@ -2,13 +2,13 @@
 <html>
 <head>
   <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-  <title>Web-to-Lead Test</title>
+  <title>Mtech Case</title>
   <style>
      .form-box {
       width: 500px;
       margin: 0 auto;
       padding: 30px;
-      border: 2px solid #888;
+      border: 1px solid #28a745;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       text-align: left;
@@ -44,9 +44,28 @@
     <input style="height: 25px; margin-top: 10px;" type="tel" name="phone"><br><br>
 
     <label>문의 내용 (Case):</label><br>
-    <input style="width:400px; height: 150px; margin-top: 10px;"  type="text" name="CaseText__c"><br><br>
+<textarea name="CaseText__c" style="width:400px; height:150px; margin-top:10px; padding:10px;"></textarea><br><br>
 
-    <input style="font-size: large;" type="submit" value="폼 제출">
+
+   <input 
+  type="submit" 
+  value="폼 제출"
+  style="
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 22px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838';"
+  onmouseout="this.style.backgroundColor='#28a745';"
+/>
+
+
   </form>
 </div>
 </body>
